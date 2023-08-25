@@ -2,7 +2,7 @@
   "server": "https://macarte-qualif.ign.fr/",
   "viewer": "https://ignf-ma-carte.github.io/mcviewer/?map=$ID&$NOTITLE",
   "editor": "https://macarte-qualif.ign.fr/$TYPE/$ID",
-  "userProfile": "http://localhost:1234/user.html?user=$NAME",
+  "userProfile": "./user.html?user=$NAME",
   "sitePiwik": 239,
   "gppKey": "0gd4sx9gxx6ves3hf3hfeyhw",
   "edugeoKey": "1mgehldv90vifl6s5ksf900i"
