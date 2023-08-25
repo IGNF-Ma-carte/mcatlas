@@ -1,0 +1,118 @@
+[data-role="content"] .hide{
+  display: none;
+}
+[data-page="site"] [data-role="content"] {
+  padding: 26rem 1em 1em ;
+}
+[data-role="content"] [data-attr="cover_picture"]{
+  height: 25rem;
+  position:absolute;
+  top:7rem;
+  left:0;
+  right:0;
+  background-image: url("../../img/default_cover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+[data-role="content"] .header-profile {
+  text-align: center;
+}
+[data-role="content"] .header-profile h1 {
+  display: inline;
+}
+
+[data-role="content"] .header-profile [data-attr="profile_picture"] {
+  height: 20rem;
+  width: 20rem;
+  float:left;
+  border-radius: 50%;
+  border: 1rem solid #fff;
+  box-sizing: border-box;
+  margin-top: -11rem;
+  position: relative;
+  z-index: 2;
+  background-image: url("../../img/default_user.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+[data-role="content"] .header-profile [data-attr="profile_picture"] i {
+  font-size: 10em;
+  text-align: center;
+}
+[data-role="content"] .header-profile [data-attr="profile_picture"] img {
+  max-width: 15rem;
+  max-height: 20rem;
+}
+
+[data-role="content"] .header-profile .social-networks{
+  margin: -.5em 0 0;
+  float:right;
+}
+[data-role="content"] .header-profile .social-networks ul {
+  margin: 0;
+  padding: 0;
+}
+[data-role="content"] .header-profile .social-networks li {
+  display: inline-block;
+  list-style-type: none;
+  color:#3993f3;
+  text-align: center;
+  font-size: 4rem;
+}
+[data-role="content"] .header-profile .social-networks li a {
+  padding: 0 .5rem;
+}
+[data-role="content"] .header-profile .social-networks li a i:before {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+}
+
+.social-networks a[href=""] {
+  display: none;
+}
+.social-networks a:before,
+.social-networks a:after {
+  display: none;
+}
+
+
+[data-role="content"] .subheader{
+  display: grid;
+  grid-gap: 2rem;
+}
+[data-role="content"] .subheader .description{
+  grid-column: 1/4;
+}
+[data-role="content"] .subheader .statistics{
+  grid-column: 4/5;
+}
+.statistics p {
+  text-align: right;
+}
+.statistics p span {
+  display: inline-block;
+  margin-left: .5em;
+}
+
+
+[data-role="content"] .maps-result{
+  margin-top: 2rem;
+}
+
+[data-role="content"] .mc-list.mc-filter .filters .author,
+[data-role="content"] .mc-list .filterOptions > div.filter-user {
+  display: none;
+}
+
+[data-role="content"] .header-profile,
+[data-role="content"] .breadcrumb,
+[data-role="content"] .subheader {
+  width: 130rem;
+  max-width: 100%;
+  margin: auto;
+  clear: both;
+}

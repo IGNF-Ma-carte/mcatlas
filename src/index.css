@@ -1,0 +1,89 @@
+.ol-ext-dialog.user-dialog > form {
+  width: 45em;
+}
+.ol-ext-dialog.user-dialog h1 {
+  text-align: left;
+  font-size: 2em;
+}
+
+.ol-ext-dialog.user-dialog .img {
+  position: absolute;
+  left: 1em;
+  width: 10em;
+  height: 10em;
+  overflow: hidden;
+  border-radius: 50%;
+  background-image: url("../img/default_user.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.ol-ext-dialog.user-dialog .ol-content {
+  position: relative;
+  padding: 0 4em .5rem 12em;
+  min-height: 10em;
+}
+.ol-ext-dialog.user-dialog .ol-content > a.article {
+  display: inline-block;
+  margin: 1em 0 0;
+}
+
+.ol-ext-dialog.user-dialog .ol-content ul.social-media {
+  position: absolute;
+  right: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 2em;
+  text-align: center;
+  /*
+  top: 50%;
+  transform: translateY(-50%);
+  */
+  bottom: .5rem;
+}
+.ol-ext-dialog.user-dialog .ol-content li a {
+  display: block;
+  font-size: 3rem;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+.ol-ext-dialog.user-dialog .ol-content li a[href=""] {
+  display: none;
+}
+.ol-ext-dialog.user-dialog .ol-content li a:before {
+  display: none;
+}
+.ol-ext-dialog.user-dialog .ol-content li a:after {
+  font-family: font-ign;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+.ol-ext-dialog.user-dialog .ol-content li.twitter a:after {
+  content: "\e90d";
+}
+.ol-ext-dialog.user-dialog .ol-content li.linkedin a:after {
+  content: "\e90f";
+}
+.ol-ext-dialog.user-dialog .ol-content li.facebook a:after {
+  content: "\e90c";
+}
+
+@media (max-width: 40em) {
+  .ol-ext-dialog.user-dialog .ol-content .img {
+    position: relative;
+    margin: auto;
+    display: block;
+  }
+  .ol-ext-dialog.user-dialog .ol-content {
+    padding-left: 1.5em;
+  }
+}
+
+/* Remove info for ELEVE */
+[data-user-role*="ROLE_EDUGEO_ELEVE"] [data-role="content"] .mc-list {
+  display: none;
+}
+/* */
