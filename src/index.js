@@ -5,7 +5,7 @@ import api from 'mcutils/api/api'
 import ListCarte from 'mcutils/api/ListCarte'
 import dialog from 'mcutils/dialog/dialog';
 import 'mcutils/font/loadFonts'
-import { getViewerURL } from 'mcutils/api/ServiceURL';
+import { getViewerURL } from 'mcutils/api/serviceURL';
 import 'mcutils/api/ListCarte.responsive.css'
 
 import publicProfile from './publicProfile/publicProfile';

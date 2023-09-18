@@ -1,5 +1,4 @@
 import charte from "mcutils/charte/macarte";
-import ol_ext_element from 'ol-ext/util/element'
 
 import contentHtml from './overview.html'
 import './index.css'
