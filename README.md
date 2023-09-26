@@ -1,6 +1,12 @@
 # mcatlas
 *Atlas des cartes produites dans Ma carte*
 
+![](https://img.shields.io/github/v/release/IGNF-Ma-carte/mcatlas)
+![](https://img.shields.io/github/stars/IGNF-Ma-carte/mcatlas)
+![](https://img.shields.io/github/commit-activity/m/IGNF-Ma-carte/mcatlas)
+![](https://img.shields.io/github/contributors/IGNF-Ma-carte/mcatlas)
+![](https://img.shields.io/github/license/IGNF-Ma-carte/mcatlas)
+
 C'est l'application utilisée pour afficher l'atlas des carte produites sur le site Ma carte.
 
 ## Installation et développement
