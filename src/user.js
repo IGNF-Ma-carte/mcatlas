@@ -15,7 +15,7 @@ import 'mcutils/api/ListCarte.responsive.css';
 import loader from 'mcutils/dialog/loader'
 import publicProfile from './publicProfile/publicProfile';
 
-import contentHtml from './publicProfile/publicProfile.html';
+import contentHtml from './publicProfile/publicProfile-page.html';
 import './publicProfile/publicProfile.css';
 
 // Set charte Macarte

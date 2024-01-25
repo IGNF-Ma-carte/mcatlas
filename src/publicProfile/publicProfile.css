@@ -1,7 +1,7 @@
 [data-role="content"] .hide{
   display: none;
 }
-[data-page="site"] [data-role="content"] {
+[data-page="site"][data-module="user"] [data-role="content"] {
   padding: 26rem 1em 1em ;
 }
 [data-role="content"] [data-attr="cover_picture"]{

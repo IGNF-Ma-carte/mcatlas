@@ -1,5 +1,6 @@
 node_modules
 sonar.md
 .cache
+.parcel-cache
 .git
 .dist

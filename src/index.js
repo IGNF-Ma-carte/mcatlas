@@ -9,7 +9,10 @@ import { getViewerURL } from 'mcutils/api/serviceURL';
 import 'mcutils/api/ListCarte.responsive.css'
 
 import publicProfile from './publicProfile/publicProfile';
-import dialogProfile from './publicProfile/dialogProfile.html'
+import dialogProfile from './publicProfile/dialogProfile-page.html'
+
+import 'ol/ol.css'
+import 'ol-ext/dist/ol-ext.css'
 import './index.css'
 
 // Set charte Macarte
@@ -37,6 +40,7 @@ list.on('click', (e) => {
 
 // Show a user dialog info on select:user
 list.on('select:user', (user) => {
+  console.log('selectUSRE', dialog)
   dialog.showWait('Recherche de l\'utilisateur...');
   // Get user
   api.getUser(user.user_id, user => {

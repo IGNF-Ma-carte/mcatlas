@@ -1,6 +1,6 @@
 import charte from "mcutils/charte/macarte";
 
-import contentHtml from './overview.html'
+import contentHtml from './overview-page.html'
 import './index.css'
 
 // Set charte Macarte
