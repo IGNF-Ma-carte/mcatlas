@@ -40,7 +40,6 @@ list.on('click', (e) => {
 
 // Show a user dialog info on select:user
 list.on('select:user', (user) => {
-  console.log('selectUSRE', dialog)
   dialog.showWait('Recherche de l\'utilisateur...');
   // Get user
   api.getUser(user.user_id, user => {
