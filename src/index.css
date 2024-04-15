@@ -1,7 +1,15 @@
-.ol-ext-dialog.user-dialog > form {
+[data-hidden-link] {
+  display: none;
+}
+
+.mc-list-carte .mc-user-orga {
+  display: none;
+}
+
+.ol-ext-dialog.profile-dialog > form {
   width: 45em;
 }
-.ol-ext-dialog.user-dialog h1 {
+.ol-ext-dialog.profile-dialog h1 {
   text-align: left;
   font-size: 2em;
 }
@@ -17,18 +25,25 @@
   background-position: center;
   background-size: cover;
 }
+.ol-ext-dialog.orga-dialog .img {
+  position: absolute;
+  max-width: 10em;
+  max-height: 10em;
+  left: 1em;
+  top: 0;
+}
 
-.ol-ext-dialog.user-dialog .ol-content {
+.ol-ext-dialog.profile-dialog .ol-content {
   position: relative;
   padding: 0 4em .5rem 12em;
   min-height: 10em;
 }
-.ol-ext-dialog.user-dialog .ol-content > a.article {
+.ol-ext-dialog.profile-dialog .ol-content > a.article {
   display: inline-block;
   margin: 1em 0 0;
 }
 
-.ol-ext-dialog.user-dialog .ol-content ul.social-media {
+.ol-ext-dialog.profile-dialog .ol-content ul.social-media {
   position: absolute;
   right: 1em;
   list-style: none;
@@ -42,42 +57,42 @@
   */
   bottom: .5rem;
 }
-.ol-ext-dialog.user-dialog .ol-content li a {
+.ol-ext-dialog.profile-dialog .ol-content li a {
   display: block;
   font-size: 3rem;
   line-height: 1em;
   margin: 0;
   padding: 0;
 }
-.ol-ext-dialog.user-dialog .ol-content li a[href=""] {
+.ol-ext-dialog.profile-dialog .ol-content li a[href=""] {
   display: none;
 }
-.ol-ext-dialog.user-dialog .ol-content li a:before {
+.ol-ext-dialog.profile-dialog .ol-content li a:before {
   display: none;
 }
-.ol-ext-dialog.user-dialog .ol-content li a:after {
+.ol-ext-dialog.profile-dialog .ol-content li a:after {
   font-family: font-ign;
   height: auto;
   padding: 0;
   margin: 0;
 }
-.ol-ext-dialog.user-dialog .ol-content li.twitter a:after {
+.ol-ext-dialog.profile-dialog .ol-content li.twitter a:after {
   content: "\e90d";
 }
-.ol-ext-dialog.user-dialog .ol-content li.linkedin a:after {
+.ol-ext-dialog.profile-dialog .ol-content li.linkedin a:after {
   content: "\e90f";
 }
-.ol-ext-dialog.user-dialog .ol-content li.facebook a:after {
+.ol-ext-dialog.profile-dialog .ol-content li.facebook a:after {
   content: "\e90c";
 }
 
 @media (max-width: 40em) {
-  .ol-ext-dialog.user-dialog .ol-content .img {
+  .ol-ext-dialog.profile-dialog .ol-content .img {
     position: relative;
     margin: auto;
     display: block;
   }
-  .ol-ext-dialog.user-dialog .ol-content {
+  .ol-ext-dialog.profile-dialog .ol-content {
     padding-left: 1.5em;
   }
 }

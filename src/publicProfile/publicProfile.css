@@ -1,7 +1,7 @@
 [data-role="content"] .hide{
   display: none;
 }
-[data-page="site"][data-module="user"] [data-role="content"] {
+[data-page="site"][data-module] [data-role="content"] {
   padding: 26rem 1em 1em ;
 }
 [data-role="content"] [data-attr="cover_picture"]{
@@ -23,7 +23,7 @@
   display: inline;
 }
 
-[data-role="content"] .header-profile [data-attr="profile_picture"] {
+[data-module="user"] [data-role="content"] .header-profile [data-attr="profile_picture"] {
   height: 20rem;
   width: 20rem;
   float:left;
@@ -38,6 +38,19 @@
   background-position: center;
   background-size: cover;
 }
+[data-module="organization"] [data-role="content"] .header-profile [data-attr="profile_picture"] {
+  min-height: 15rem;
+  min-width: 20rem;
+  float:left;
+  box-sizing: border-box;
+  margin-top: -5rem;
+  position: relative;
+  z-index: 2;
+  background-image: url("../../img/default_user.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 [data-role="content"] .header-profile [data-attr="profile_picture"] i {
   font-size: 10em;
   text-align: center;
@@ -47,6 +60,9 @@
   max-height: 20rem;
 }
 
+[data-module="organization"] [data-role="content"] .header-profile .social-networks {
+  display: none;
+}
 [data-role="content"] .header-profile .social-networks{
   margin: -.5em 0 0;
   float:right;
@@ -103,6 +119,7 @@
   margin-top: 2rem;
 }
 
+[data-module="organization"] [data-role="content"] .mc-list.mc-filter .filters .organization,
 [data-role="content"] .mc-list.mc-filter .filters .author,
 [data-role="content"] .mc-list .filterOptions > div.filter-user {
   display: none;

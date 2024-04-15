@@ -9,7 +9,7 @@ import { getViewerURL } from 'mcutils/api/serviceURL';
 import 'mcutils/api/ListCarte.responsive.css'
 
 import publicProfile from './publicProfile/publicProfile';
-import dialogProfile from './publicProfile/dialogProfile-page.html'
+import dialogProfile from './publicProfile/publicProfile-dialog.html'
 
 import 'ol/ol.css'
 import 'ol-ext/dist/ol-ext.css'
@@ -48,13 +48,32 @@ list.on('select:user', (user) => {
       dialog.showAlert('Impossible d\'accéder à l\'utilisateur...')
     } else {
       dialog.show({ 
-        className: 'user-dialog',
+        className: 'profile-dialog user-dialog',
         content: dialogProfile, 
         buttons: { ok: 'ok' } 
       });
       publicProfile(user, dialog.getContentElement());
     }
   })
+})
+
+// Show organization dialog info on select:organization
+list.on('select:organization', (orga) => {
+  dialog.showWait('Recherche de l\'organisation...');
+  // Get user
+  api.getOrganization(orga.organization_id, orga => {
+    // Show user dialog
+    if (orga.error) {
+      dialog.showAlert('Impossible d\'accéder à l\'organisation...')
+    } else {
+      dialog.show({ 
+        className: 'profile-dialog orga-dialog',
+        content: dialogProfile, 
+        buttons: { ok: 'ok' } 
+      });
+      publicProfile(orga, dialog.getContentElement());
+    }
+  }, true)
 })
 
 // Show list on start

@@ -1,21 +1,27 @@
 import { getUserURL, encodeTitleURL } from 'mcutils/api/serviceURL';
 import md2html from 'mcutils/md/md2html';
 
+const lut = {
+  public_name: 'name',
+  profile_picture: 'image'
+}
+
 /** Display public profil in the content element
  * @param {Object} user
  * @param {Element} contentElt
  */
-function publicProfile(user, contentElt) {
+function publicProfile(obj, contentElt) {
+  const isOrga = obj.members;
   contentElt.querySelectorAll('[data-attr]').forEach(elt => {
     let attribute = elt.dataset.attr;
-    let value = user[attribute];
+    if (isOrga) attribute = lut[attribute] || attribute;
+    let value = obj[attribute];
     displayAttribute(elt, attribute, value);
   });
   const publicLink = contentElt.querySelector('a.article.button');
   if (publicLink) {
-    const publicName = encodeTitleURL(user.public_name);
-    publicLink.href = getUserURL(publicName + '_' + user.public_id);
-    publicLink.querySelector('span').innerText = user.public_name;
+    const publicName = encodeTitleURL(isOrga ? obj.name : obj.public_name);
+    publicLink.href = getUserURL(publicName + '_' + obj.public_id);
   }
 }
 
@@ -37,6 +43,7 @@ function displayAttribute(elt, attribute, value){
       md2html.element(value, elt);
       break;
     }
+    // Social media links
     case 'twitter_account': 
     case 'facebook_account': 
     case 'linkedin_account': {
@@ -44,17 +51,17 @@ function displayAttribute(elt, attribute, value){
       elt.querySelector('a').setAttribute('title', attribute.split('_')[0]);
       break;
     }
-    case 'profile_picture':
-    case 'cover_picture': {
-      elt.style.backgroundImage = value ? 'url("'+ value +'")' : '';
-      break;
-    }
-    case 'registered_at': {
-      elt.innerText = (new Date(value.split('T')[0])).toLocaleDateString(undefined, { year: 'numeric', month: 'short' });
-      break;
-    }
+    // Others
     default: {
-      elt.innerText = value.toLocaleString();
+      if (elt.tagName === 'IMG') {
+        elt.src = value;
+      } else if (elt.dataset.bgimg) {
+        elt.style.backgroundImage = value ? 'url("'+ value +'")' : '';
+      } else if (elt.dataset.date) {
+        elt.innerText = (new Date(value.split('T')[0])).toLocaleDateString(undefined, { year: 'numeric', month: 'short' });
+      } else {
+        elt.innerText = (value && value.toLocaleString) ? value.toLocaleString() : value || '';
+      }
       break;
     }
   }
