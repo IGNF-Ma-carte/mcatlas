@@ -38,12 +38,11 @@ if (!orgaID) {
 
 // If no user, show error
 if (orgaID) {
-  api.getOrganization(orgaID, (response) => {
-    if (!response || response.error) {
+  api.getOrganization(orgaID, (orga) => {
+    if (!orga || orga.error) {
       showError();
       return;
     }
-    orga = response;
     // Search organization maps
     list.removeFilter('organization');
     list.setFilter('organization', orgaID);
