@@ -6,7 +6,6 @@
   "editor": "https://macarte-qualif.ign.fr/$TYPE/$ID",
   "userProfile": "./user.html?user=$NAME",
   "orgaProfile": "./organization.html?orga=$NAME",
-  "sitePiwik": 239,
   "gppKey": "0gd4sx9gxx6ves3hf3hfeyhw",
   "edugeoKey": "1mgehldv90vifl6s5ksf900i"
 }
