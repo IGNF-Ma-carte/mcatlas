@@ -68,6 +68,9 @@ function displayAttribute(elt, attribute, value){
         elt.innerText = (new Date(value.split('T')[0])).toLocaleDateString(undefined, { year: 'numeric', month: 'short' });
       } else {
         elt.innerText = (value && value.toLocaleString) ? value.toLocaleString() : value || '';
+        if (typeof(value) === 'number' && value > 1) {
+          elt.parentNode.dataset.plural = '';
+        }
       }
       break;
     }
