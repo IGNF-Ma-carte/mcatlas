@@ -51,6 +51,12 @@
   background-position: center;
   background-size: contain;
 }
+[data-module="user"] .created_at {
+  display: none;
+}
+[data-module="organization"] .member_at {
+  display: none;
+}
 [data-role="content"] .header-profile [data-attr="profile_picture"] i {
   font-size: 10em;
   text-align: center;

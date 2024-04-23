@@ -3,7 +3,6 @@ import md2html from 'mcutils/md/md2html';
 
 // Convert user atts to organization
 const lut = {
-  registered_at: 'created_at',
   public_name: 'name'
 }
 
