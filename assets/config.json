@@ -5,7 +5,7 @@
   "viewer": "https://ignf-ma-carte.github.io/mcviewer/?map=$ID&$NOTITLE",
   "editor": "https://macarte-qualif.ign.fr/$TYPE/$ID",
   "userProfile": "./user.html?user=$NAME",
-  "orgaProfile": "./organization.html?orga=$NAME",
+  "teamProfile": "./team.html?team=$NAME",
   "gppKey": "0gd4sx9gxx6ves3hf3hfeyhw",
   "edugeoKey": "1mgehldv90vifl6s5ksf900i"
 }

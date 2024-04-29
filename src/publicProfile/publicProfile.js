@@ -1,7 +1,7 @@
-import { getUserURL, encodeTitleURL, getOrgaURL } from 'mcutils/api/serviceURL';
+import { getUserURL, encodeTitleURL, getTeamURL } from 'mcutils/api/serviceURL';
 import md2html from 'mcutils/md/md2html';
 
-// Convert user atts to organization
+// Convert user atts to team
 const lut = {
   public_name: 'name'
 }
@@ -11,20 +11,20 @@ const lut = {
  * @param {Element} contentElt
  */
 function publicProfile(obj, contentElt) {
-  const isOrga = obj.nb_members;
+  const isTeam = obj.nb_members;
   // Update attributes
   contentElt.querySelectorAll('[data-attr]').forEach(elt => {
     let attribute = elt.dataset.attr;
-    if (isOrga) attribute = lut[attribute] || attribute;
+    if (isTeam) attribute = lut[attribute] || attribute;
     let value = obj[attribute];
     displayAttribute(elt, attribute, value);
   });
   // Link to profile page
   const publicLink = contentElt.querySelector('a.article.button');
   if (publicLink) {
-    if (isOrga) {
+    if (isTeam) {
       const publicName = encodeTitleURL(obj.name);
-      publicLink.href = getOrgaURL(publicName + '_' + obj.public_id);
+      publicLink.href = getTeamURL(publicName + '_' + obj.public_id);
     } else {
       const publicName = encodeTitleURL(obj.public_name);
       publicLink.href = getUserURL(publicName + '_' + obj.public_id);

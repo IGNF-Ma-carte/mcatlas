@@ -26,29 +26,28 @@ const contentElt = charte.getAppElement();
 contentElt.innerHTML = contentHtml;
 
 // Get ID in search parameters
-let orga;
-let orgaID = getUrlParameter('orga').split('_').pop();
+let teamID = getUrlParameter('team').split('_').pop();
 
 // Try to get ID in the url path: path/ID/TITLE
-if (!orgaID) {
+if (!teamID) {
   // path = <public_name encodé url>_<public_id>
   const path = document.location.pathname.split('/');
-  orgaID = path.pop().split('_').pop();
+  teamID = path.pop().split('_').pop();
 }
 
 // If no user, show error
-if (orgaID) {
-  api.getOrganization(orgaID, (orga) => {
-    if (!orga || orga.error) {
+if (teamID) {
+  api.getTeam(teamID, (t) => {
+    if (!t || t.error) {
       showError();
       return;
     }
-    // Search organization maps
+    // Search team maps
     list.removeFilter('organization');
-    list.setFilter('organization', orgaID);
+    list.setFilter('organization', teamID);
     list.search();
     loader.hide();
-    publicProfile(orga, contentElt);
+    publicProfile(t, contentElt);
   }, true)
 } else {
   showError();
@@ -78,5 +77,5 @@ function showError(){
   });
   // Error
   loader.hide();
-  dialog.show404(elt , 'Impossible d\'accéder à l\'organisation.');
+  dialog.show404(elt , 'Impossible d\'accéder à l\'équipe.');
 }

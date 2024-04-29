@@ -24,7 +24,7 @@
 }
 
 [data-module="user"] [data-role="content"] .header-profile [data-attr="profile_picture"],
-[data-module="organization"] [data-role="content"] .header-profile [data-attr="profile_picture"] {
+[data-module="team"] [data-role="content"] .header-profile [data-attr="profile_picture"] {
   min-height: 15rem;
   width: 20rem;
   max-width: 30%;
@@ -56,7 +56,7 @@
 [data-module="user"] .created_at {
   display: none;
 }
-[data-module="organization"] .registered_at {
+[data-module="team"] .registered_at {
   display: none;
 }
 [data-role="content"] .header-profile [data-attr="profile_picture"] i {
@@ -68,7 +68,7 @@
   max-height: 20rem;
 }
 
-[data-module="organization"] [data-role="content"] .header-profile .social-networks {
+[data-module="team"] [data-role="content"] .header-profile .social-networks {
   display: none;
 }
 [data-role="content"] .header-profile .social-networks{
@@ -127,7 +127,7 @@
   margin-top: 2rem;
 }
 
-[data-module="organization"] [data-role="content"] .mc-list.mc-filter .filters .organization,
+[data-module="team"] [data-role="content"] .mc-list.mc-filter .filters .organization,
 [data-role="content"] .mc-list.mc-filter .filters .author,
 [data-role="content"] .mc-list .filterOptions > div.filter-user {
   display: none;

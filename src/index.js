@@ -57,21 +57,21 @@ list.on('select:user', (user) => {
   })
 })
 
-// Show organization dialog info on select:organization
-list.on('select:organization', (orga) => {
-  dialog.showWait('Recherche de l\'organisation...');
+// Show team dialog info on select:team
+list.on('select:team', team => {
+  dialog.showWait('Recherche de l\'équipe...');
   // Get user
-  api.getOrganization(orga.organization_id, orga => {
+  api.getTeam(team.id, t => {
     // Show user dialog
-    if (orga.error) {
-      dialog.showAlert('Impossible d\'accéder à l\'organisation...')
+    if (t.error) {
+      dialog.showAlert('Impossible d\'accéder à l\'équipe...')
     } else {
       dialog.show({ 
-        className: 'profile-dialog orga-dialog',
+        className: 'profile-dialog team-dialog',
         content: dialogProfile, 
         buttons: { ok: 'ok' } 
       });
-      publicProfile(orga, dialog.getContentElement());
+      publicProfile(t, dialog.getContentElement());
     }
   }, true)
 })
