@@ -104,25 +104,6 @@
 }
 
 
-[data-role="content"] .subheader{
-  display: grid;
-  grid-gap: 2rem;
-}
-[data-role="content"] .subheader .description{
-  grid-column: 1/4;
-}
-[data-role="content"] .subheader .statistics{
-  grid-column: 4/5;
-}
-.statistics p {
-  text-align: right;
-}
-.statistics p span {
-  display: inline-block;
-  margin-left: .5em;
-}
-
-
 [data-role="content"] .maps-result{
   margin-top: 2rem;
 }
@@ -140,6 +121,11 @@
   max-width: 100%;
   margin: auto;
   clear: both;
+  box-sizing: border-box;
+}
+[data-role="content"] .subheader {
+  background-color: #f4f6f8;
+  padding: 1rem 2rem;
 }
 
 [data-role="content"] .header-info {
