@@ -23,8 +23,8 @@
   display: inline;
 }
 
-[data-module="user"] [data-role="content"] .header-profile [data-attr="profile_picture"],
-[data-module="team"] [data-role="content"] .header-profile [data-attr="profile_picture"] {
+[data-module="user"] [data-role="content"] [data-attr="profile_picture"],
+[data-module="team"] [data-role="content"] [data-attr="profile_picture"] {
   min-height: 15rem;
   width: 20rem;
   max-width: 30%;
@@ -38,7 +38,7 @@
   background-position: center;
   background-size: contain;
 }
-[data-module="user"] [data-role="content"] .header-profile [data-attr="profile_picture"] {
+[data-module="user"] [data-role="content"] [data-attr="profile_picture"] {
   aspect-ratio: 1/1;
   min-height: unset;
   border-radius: 50%;
@@ -48,7 +48,7 @@
   background-size: cover;
 }
 @media (max-width: 700px) {
-  [data-module="user"] [data-role="content"] .header-profile [data-attr="profile_picture"] {
+  [data-module="user"] [data-role="content"] [data-attr="profile_picture"] {
     border-width: 1.5vw;
   }
 }
@@ -59,18 +59,15 @@
 [data-module="team"] .registered_at {
   display: none;
 }
-[data-role="content"] .header-profile [data-attr="profile_picture"] i {
+[data-role="content"] [data-attr="profile_picture"] i {
   font-size: 10em;
   text-align: center;
 }
-[data-role="content"] .header-profile [data-attr="profile_picture"] img {
+[data-role="content"] [data-attr="profile_picture"] img {
   max-width: 15rem;
   max-height: 20rem;
 }
 
-[data-module="team"] [data-role="content"] .header-profile .social-networks {
-  display: none;
-}
 [data-role="content"] .header-profile .social-networks{
   margin: -.5em 0 0;
   float:right;
@@ -78,6 +75,7 @@
 [data-role="content"] .header-profile .social-networks ul {
   margin: 0;
   padding: 0;
+  display: inline;
 }
 [data-role="content"] .header-profile .social-networks li {
   display: inline-block;
@@ -85,6 +83,7 @@
   color:#3993f3;
   text-align: center;
   font-size: 4rem;
+  line-height: 1.25em;
 }
 [data-role="content"] .header-profile .social-networks li a {
   padding: 0 .5rem;
@@ -102,7 +101,6 @@
 .social-networks a:after {
   display: none;
 }
-
 
 [data-role="content"] .maps-result{
   margin-top: 2rem;

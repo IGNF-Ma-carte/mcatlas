@@ -2,40 +2,35 @@
 
 <div class="header-profile">
   <div data-attr="profile_picture" data-bgimg="1"></div>
-  <h1 data-attr="public_name"></h1>
+  <br/>
   <div class="social-networks">
     <ul>
-      <li class="social-network" data-attr="twitter_account">
-        <a target="_blank">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li class="social-network" data-attr="facebook_account">
-        <a target="_blank">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li class="social-network" data-attr="linkedin_account">
-        <a target="_blank">
-          <i class="fa fa-linkedin" aria-hidden="true"></i>
-        </a>
-      </li>
+      <li class="social-network" data-attr="twitter_account" title="X / twitter"><a target="_blank">
+        <i class="fi-x-twitter" aria-hidden="true"></i>
+      </a></li>
+      <li class="social-network" data-attr="facebook_account" title="facebook"><a target="_blank">
+        <i class="fi-facebook" aria-hidden="true"></i>
+      </a></li>
+      <li class="social-network" data-attr="linkedin_account" title="linkedin"><a target="_blank">
+        <i class="fi-linkedin" aria-hidden="true"></i>
+      </a></li>
     </ul>
   </div>
+  <h1 data-attr="public_name"></h1>
+  <ul class="header-info">
+    <li title="nombre de cartes partagées">
+      <i class="fi-map"></i> <span data-attr="nb_shared_maps"></span> carte<span class="plural">s</span>
+    </li>
+    <li title="nombre de vues">
+      <i class="fi-visible"></i> <span data-attr="nb_views"></span> vue<span class="plural">s</span>
+    </li>
+    <li title="depuis">
+      <i class="fi-calendar"></i>
+      <span data-attr="registered_at" data-date="1"></span>
+      <span data-attr="created_at" data-date="1"></span>
+    </li>
+  </ul>
 </div>
-<ul class="header-info">
-  <li title="nombre de cartes partagées">
-    <i class="fi-map"></i> <span data-attr="nb_shared_maps"></span> carte<span class="plural">s</span>
-  </li>
-  <li title="nombre de vues">
-    <i class="fi-visible"></i> <span data-attr="nb_views"></span> vue<span class="plural">s</span>
-  </li>
-  <li title="depuis">
-    <i class="fi-calendar"></i>
-    <span data-attr="registered_at" data-date="1"></span>
-    <span data-attr="created_at" data-date="1"></span>
-  </li>
-</ul>
 
 <!-- 
   <ul class="breadcrumb"> 

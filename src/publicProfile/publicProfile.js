@@ -55,7 +55,6 @@ function displayAttribute(elt, attribute, value){
     case 'facebook_account': 
     case 'linkedin_account': {
       elt.querySelector('a').setAttribute('href', value ? socialNetwork[attribute] + value : '');
-      elt.querySelector('a').setAttribute('title', attribute.split('_')[0]);
       break;
     }
     // Others
