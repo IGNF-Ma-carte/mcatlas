@@ -8,6 +8,7 @@ import ol_ext_element from 'ol-ext/util/element'
 import serviceURL, { getViewerURL } from 'mcutils/api/serviceURL';
 
 import publicProfile from './publicProfile/publicProfile';
+import { teamDialog } from './publicProfile/dialog'
 
 import 'mcutils/font/loadFonts';
 import 'mcutils/api/ListCarte.responsive.css';
@@ -70,6 +71,8 @@ if (!userID && !teamID) {
       list.search();
       loader.hide();
       publicProfile(user, contentElt);
+      // User teams
+      list.on('select:team', teamDialog)
     })
   } else {
     api.getTeam(teamID, (response) => {
@@ -85,7 +88,7 @@ if (!userID && !teamID) {
       list.setFilter('organization', teamID);
       list.search();
       loader.hide();
-      publicProfile(team, contentElt);
+      publicProfile(team, contentElt, true);
     }, true)
   }  
 }

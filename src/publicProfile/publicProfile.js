@@ -1,17 +1,23 @@
 import { getUserURL, encodeTitleURL, getTeamURL } from 'mcutils/api/serviceURL';
 import md2html from 'mcutils/md/md2html';
 
-// Convert user atts to team
+// LookUpTable: convert user atts to team
 const lut = {
   public_name: 'name'
+}
+
+// Social media urls
+const socialNetwork = {
+  twitter_account: 'https://twitter.com/',
+  facebook_account: 'https://www.facebook.com/',
+  linkedin_account: 'https://linkedin.com/in/',
 }
 
 /** Display public profil in the content element
  * @param {Object} user
  * @param {Element} contentElt
  */
-function publicProfile(obj, contentElt) {
-  const isTeam = obj.nb_members;
+function publicProfile(obj, contentElt, isTeam) {
   // Update attributes
   contentElt.querySelectorAll('[data-attr]').forEach(elt => {
     let attribute = elt.dataset.attr;
@@ -30,13 +36,6 @@ function publicProfile(obj, contentElt) {
       publicLink.href = getUserURL(publicName + '_' + obj.public_id);
     }
   }
-}
-
-// Social media urls
-const socialNetwork = {
-  twitter_account: 'https://twitter.com/',
-  facebook_account: 'https://www.facebook.com/',
-  linkedin_account: 'https://linkedin.com/in/',
 }
 
 /** Display attribute in element
