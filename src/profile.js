@@ -1,5 +1,3 @@
-import api from 'mcutils/api/api'
-
 import charte from 'mcutils/charte/macarte'
 import loader from 'mcutils/dialog/loader'
 import { getUrlParameter } from 'mcutils/control/url'
@@ -63,7 +61,7 @@ if (!userID && !teamID) {
         showError();
         return;
       }
-      user = response;
+      const user = response;
       document.body.dataset.module = 'user';
       document.title = document.title.replace('profil', user.public_name);
       // Search user maps
@@ -79,7 +77,7 @@ if (!userID && !teamID) {
         showError();
         return;
       }
-      team = response;
+      const team = response;
       document.body.dataset.module = 'team';
       document.title = document.title.replace('profil', team.name);
       // Search team maps
