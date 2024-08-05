@@ -5,7 +5,7 @@ import dialog from 'mcutils/dialog/dialog'
 import api from 'mcutils/api/api';
 import ListCarte from 'mcutils/api/ListCarte';
 import ol_ext_element from 'ol-ext/util/element'
-import serviceURL, { getViewerURL } from 'mcutils/api/serviceURL';
+import serviceURL, { getTeamURL, getViewerURL } from 'mcutils/api/serviceURL';
 
 import publicProfile from './publicProfile/publicProfile';
 import { teamDialog } from './publicProfile/dialog'
@@ -104,3 +104,8 @@ function showError(){
   loader.hide();
   dialog.show404(elt , 'Impossible d\'accéder à l\'équipe.');
 }
+
+// On team change, change page
+charte.on('header:team', e => {
+  document.location = getTeamURL(e.team) || serviceURL.search;
+})
