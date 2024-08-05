@@ -8,7 +8,6 @@ import { getTeamURL, getViewerURL } from 'mcutils/api/serviceURL';
 import 'mcutils/api/ListCarte.responsive.css'
 
 import { teamDialog, userDialog } from './publicProfile/dialog';
-import team from 'mcutils/api/team'
 
 import 'ol/ol.css'
 import 'ol-ext/dist/ol-ext.css'
