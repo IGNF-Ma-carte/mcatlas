@@ -2,6 +2,10 @@
   display: none;
 }
 
+.mc-search {
+  clear: both;
+}
+
 .mc-list-carte .mc-user-orga {
   display: none;
 }
