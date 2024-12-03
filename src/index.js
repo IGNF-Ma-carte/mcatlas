@@ -42,9 +42,6 @@ list.on('select:user', userDialog)
 // Show team dialog info on select:team
 list.on('select:team', teamDialog)
 
-// Show list on start
-list.search();
-
 // On team change => change page
 charte.on('header:team', e => {
   document.location = getTeamURL(e.team);
