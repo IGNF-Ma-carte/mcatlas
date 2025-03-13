@@ -80,6 +80,7 @@
   padding: 0;
   margin: 0;
 }
+
 .ol-ext-dialog.profile-dialog .ol-content li.twitter a:after {
   content: "\e90d";
 }
