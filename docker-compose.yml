@@ -7,4 +7,4 @@ services:
     container_name: macarte_atlas
     restart: always
     ports: 
-      - 8081:8080
+      - 8080:8080
