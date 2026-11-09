@@ -44,3 +44,5 @@ COPY --chown=www-data:www-data ./docs /opt/mcatlas/
 WORKDIR /opt/mcatlas
 
 EXPOSE 8080
+
+CMD ["apache2-foreground"]
